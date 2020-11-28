@@ -8,7 +8,7 @@ function MainPage (){
 	useEffect(
 		() =>
 			fetch(
-				`https://api.github.com/search/repositssssssories?q=created:>2017-10-22&sort=stars&order=desc&page=${PageNo}`
+				`https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&order=desc&page=${PageNo}`
 			)
 				.then(response => response.json())
 				.then(data => {
@@ -28,7 +28,23 @@ function MainPage (){
 	if (Error) {
 		return <h1>An Unexpected Error has occured , please check your internet connectivity and refresh the page</h1>;
 	} else {
-		return <Fragment>{TotalRepos.length > 0 ? TotalRepos.map((item, key) => <Repo key={key} />) : null}</Fragment>;
+		return (
+			<ul className="ReposList pt-5 pl-5 pr-5">
+				{TotalRepos.length > 0 ? (
+					TotalRepos.map((item, key) => (
+						<Repo
+							key={key}
+							name={item.name}
+							description={item.description}
+							stars={item.stargazers_count}
+							issues={item.open_issues_count}
+							userName={item.owner.login}
+							img={item.owner.avatar_url}
+						/>
+					))
+				) : null}
+			</ul>
+		);
 	}
 }
 export default MainPage;
