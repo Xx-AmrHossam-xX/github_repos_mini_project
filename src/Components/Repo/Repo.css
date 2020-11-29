@@ -1,0 +1,56 @@
+.RepoContainer {
+	display: flex;
+}
+.DataContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.Avatar {
+	width: 200px;
+	height: 200px;
+}
+.RepoFooter {
+	display: flex;
+}
+.RepoFooter p {
+	margin: 0px;
+	padding: 2px 0px;
+}
+.RepoFooter div {
+	display: flex;
+}
+.RepoFooter div div {
+	padding: 2px 7px;
+	margin-right: 5px;
+	color: white;
+	background-color: goldenrod;
+}
+.RepoFooter div div:nth-child(2) {
+	background-color: firebrick;
+}
+@media (max-width: 767px) {
+	.RepoContainer {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	.RepoFooter {
+		align-items: center;
+	}
+	.DataContainer h2 {
+		margin-top: 0.5rem;
+	}
+	.DataContainer p {
+		margin-bottom: 0px;
+	}
+	.RepoFooter div {
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+}
+@media (max-width: 540px) {
+	.RepoFooter {
+		flex-direction: column;
+	}
+}
