@@ -1,5 +1,7 @@
-import { useState, useEffect, Fragment } from 'react';
+import { Fragment } from 'react';
+//CSS
 import './App.css';
+//COMPONENTS
 import MainPage from './Pages/MainPage/MainPage';
 function App (){
 	return (

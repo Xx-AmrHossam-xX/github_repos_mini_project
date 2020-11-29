@@ -1,0 +1,12 @@
+.ErrorMsgContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100vw;
+	height: 100vh;
+}
+.ErrorMsgContainer p {
+	color: red;
+	font-weight: bold;
+}

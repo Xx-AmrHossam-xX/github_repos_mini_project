@@ -1,5 +1,6 @@
-import { useState, useEffect, Fragment } from 'react';
+//CSS
 import './Repo.css';
+
 function Repo ({ name, description, stars, issues, userName, img }){
 	return (
 		<article className="RepoContainer mb-5">
